@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/docs/" />
+  <Folder Name="/docs/">
+    <File Path="Howto.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/OldPhoneKeypad/OldPhoneKeypad.csproj" />
     <Project Path="src/RestDemo/RestDemo.csproj" />
