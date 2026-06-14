@@ -23,9 +23,19 @@ app.MapPost("/api/ironoldphonekeypad/oldphonepad",
         }
 
         string input = request.Input ?? string.Empty;
-        string output = PhoneKeypad.OldPhonePad(input);
 
-        return Results.Ok(new ParseResponse(input, output));
+        try
+        {
+            string output = PhoneKeypad.OldPhonePad(input);
+            return Results.Ok(new ParseResponse(input, output));
+        }
+        catch (Exception ex)
+        {
+            return Results.BadRequest(new
+            {
+                error = ex.Message
+            });
+        }
     });
 
 app.Run();
