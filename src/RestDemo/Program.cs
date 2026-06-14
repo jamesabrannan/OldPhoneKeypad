@@ -16,9 +16,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapPost("/api/ironoldphonekeypad/oldphonepad",
-    async delegate (HttpContext context)
+    static async delegate (HttpContext context)
     {
-        ParseRequest request;
+        ParseRequest? request;
 
         try
         {
