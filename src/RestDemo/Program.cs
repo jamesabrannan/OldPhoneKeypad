@@ -1,5 +1,6 @@
 using IronOldPhoneKeypad;
 using RestDemo.Models;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,11 +16,29 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapPost("/api/ironoldphonekeypad/oldphonepad",
-    delegate (ParseRequest request)
+    async delegate (HttpContext context)
     {
+        ParseRequest request;
+
+        try
+        {
+            request = await JsonSerializer.DeserializeAsync<ParseRequest>(
+                context.Request.Body);
+        }
+        catch (JsonException)
+        {
+            return Results.BadRequest(new
+            {
+                error = "Request body must be valid JSON."
+            });
+        }
+
         if (request == null)
         {
-            return Results.BadRequest("Request body is required.");
+            return Results.BadRequest(new
+            {
+                error = "Request body is required."
+            });
         }
 
         string input = request.Input ?? string.Empty;

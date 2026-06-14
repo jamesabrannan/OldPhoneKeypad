@@ -18,3 +18,8 @@ C:\>curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" -H 
 {"error":"Input must contain the '#' terminator."}
 ```
 
+```bash
+# OldPhonePad - Not JSON REQUEST Error Example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" -H "Content-Type: application/json" -d "\466\"}"
+```
+

@@ -1,0 +1,14 @@
+# OldPhonePad - pause between repeated keys example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "{\"input\":\"222 2 22#\"}"
+
+# OldPhonePad - invalid input example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "{\"input\":\"44A#\"}"
+
+# OldPhonePad - pause between repeated keys example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "{\"input\":\"222 2 22#\"}"

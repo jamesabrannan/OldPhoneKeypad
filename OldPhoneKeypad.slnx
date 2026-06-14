@@ -8,6 +8,7 @@
     <Project Path="src/RestDemo/RestDemo.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <File Path="curltests.txt" />
     <Project Path="tests/Tests/Tests.csproj" />
   </Folder>
 </Solution>
