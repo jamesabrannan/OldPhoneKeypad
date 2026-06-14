@@ -1,14 +1,12 @@
+using IronOldPhoneKeypad;
+using RestDemo.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -16,8 +14,18 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.MapPost("/api/ironoldphonekeypad/oldphonepad",
+    delegate (ParseRequest request)
+    {
+        if (request == null)
+        {
+            return Results.BadRequest("Request body is required.");
+        }
 
-app.MapControllers();
+        string input = request.Input ?? string.Empty;
+        string output = PhoneKeypad.OldPhonePad(input);
+
+        return Results.Ok(new ParseResponse(input, output));
+    });
 
 app.Run();

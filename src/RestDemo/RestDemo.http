@@ -1,6 +1,41 @@
-@RestDemo_HostAddress = http://localhost:5059
+@RestDemo_HostAddress = https://localhost:7001
 
-GET {{RestDemo_HostAddress}}/weatherforecast/
-Accept: application/json
+### OldPhonePad - HELLO example
+POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
+Content-Type: application/json
 
-###
+{
+  "input": "4433555 555666#"
+}
+
+### OldPhonePad - backspace example
+POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
+Content-Type: application/json
+
+{
+  "input": "227*#"
+}
+
+### OldPhonePad - single character example
+POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
+Content-Type: application/json
+
+{
+  "input": "33#"
+}
+
+### OldPhonePad - invalid input example
+POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
+Content-Type: application/json
+
+{
+  "input": "44A#"
+}
+
+### OldPhonePad - backspace example
+POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
+Content-Type: application/json
+
+{
+  "input": "222 2 22#"
+}

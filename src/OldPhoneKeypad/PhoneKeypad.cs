@@ -26,6 +26,10 @@ namespace IronOldPhoneKeypad
             {
                 return string.Empty;
             }
+            else if (input.IndexOf('#') < 0)
+            {
+                throw new ArgumentException("Input must contain the '#' terminator.");
+            }
 
             StringBuilder output = new StringBuilder();
             StringBuilder current = new StringBuilder();

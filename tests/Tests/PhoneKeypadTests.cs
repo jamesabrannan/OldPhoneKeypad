@@ -52,5 +52,19 @@ namespace IronOldPhoneKeypad.Tests
             Assert.Equal("E", result);
         }
 
+        [Fact]
+        public void OldPhonePad_StopsProcessing_HandlesAssignmentExample()
+        {
+            string result = PhoneKeypad.OldPhonePad("222 2 22#");
+
+            Assert.Equal("CAB", result);
+        }
+
+        [Fact]
+        public void OldPhonePad_StopsProcessing_HandlesAssignmentError()
+        {
+            Assert.Throws<ArgumentException>(
+                delegate { PhoneKeypad.OldPhonePad("44A#"); });
+        }
     }
 }
