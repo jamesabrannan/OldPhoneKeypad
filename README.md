@@ -156,3 +156,11 @@ dotnet test
 | Tests              | .NET 10           |
 
 The core library targets .NET Standard 2.0 to maximize compatibility across .NET implementations.
+
+## AI Prompt
+
+The following ChatGPT prompt was used for project review and documentation feedback:
+
+https://chatgpt.com/?q=Review%20this%20C%23%20Software%20Sales%20Engineer%20coding%20challenge%20submission%20and%20summarize%20the%20solution%20architecture%2C%20REST%20API%20wrapper%2C%20testing%20strategy%2C%20documentation%20quality%2C%20and%20overall%20engineering%20approach.%20GitHub%20repository%3A%20https%3A%2F%2Fgithub.com%2Fjamesabrannan%2FOldPhoneKeypad
+
+Tool used: ChatGPT
