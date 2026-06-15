@@ -1,6 +1,6 @@
 # OldPhoneKeypad
 
-OldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo showing how the library can be integrated into a real-world application.
+OldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo showing how to integrate the library into a real-world application.
 
 ## Solution Structure
 
@@ -56,7 +56,7 @@ The keypad mappings follow the traditional mobile phone keypad layout:
 # Library Usage
 
 ```csharp
-using OldPhoneKeypad;
+using IronOldPhoneKeypad;
 
 string result = PhoneKeypad.OldPhonePad("4433555 555666#");
 
@@ -121,9 +121,13 @@ POST /api/ironoldphonekeypad/oldphonepad
 
 The API will launch using the local development profile.
 
+Refer to the document [howtorun.md](./docs/howtorun.md) for more more detailed instructions on running the REST demo
+
 ## Test Requests
 
 The project includes a `RestDemo.http` file containing sample API requests that can be executed directly from Visual Studio.
+
+The project also includes example curl requests in [curltests.txt](./docs/curltests.txt).
 
 ---
 
