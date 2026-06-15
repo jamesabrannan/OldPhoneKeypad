@@ -62,9 +62,9 @@ app.MapPost("/api/ironoldphonekeypad/oldphonepad",
             // Returns the original input and parsed output.
             return Results.Ok(new ParseResponse(input, output));
         }
+        // Return all errors as JSON for demo purposes.
         catch (Exception ex)
         {
-            // Returns validation or parsing errors.
             return Results.BadRequest(new
             {
                 error = ex.Message
