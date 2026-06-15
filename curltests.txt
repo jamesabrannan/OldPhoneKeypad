@@ -12,3 +12,18 @@ curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 -H "Content-Type: application/json" ^
 -d "{\"input\":\"222 2 22#\"}"
+
+# OldPhonePad - single character example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "{\"input\":\"33#\"}"
+
+# OldPhonePad - backspace example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "{\"input\":\"227*#\"}"
+
+# OldPhonePad - HELLO example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "{\"input\":\"4433555 555666#\"}"
