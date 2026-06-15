@@ -1,6 +1,6 @@
 # HOWTO
 
-The easiest way to run the application and visualize the endpoint is through Visual Studio. Follow the steps in this document to successfully run the demo application. You can also use curl to demo the endpoint.
+Use Visual Studio and the included `RestDemo.http` file to quickly run and test the REST API demo application.
 
 ## Assumptions
 
@@ -15,10 +15,10 @@ Running this demo application assumes the following setup configuration.
 ## Running the REST Demo
 
 1. Open the solution in Visual Studio.
-2. Set `RestDemo` as the startup project if not already.
-3. Press `F5` or `Ctrl+F5`.
+2. Set `RestDemo` as the startup project if not already selected.
+3. Press `F5` or `Ctrl+F5` to launch the application.
 
-The REST API will start locally using the configured development profile.
+The REST API starts locally using the configured development profile.
 
 Default URLs:
 
@@ -29,9 +29,9 @@ http://localhost:5059
 
 ---
 
-## Sending Requests
+## Send Requests from Visual Studio
 
-The project includes a `RestDemo.http` file containing ready-to-run example requests. 
+The project includes a `RestDemo.http` file containing ready-to-run HTTP example requests. 
 
 * Open  `RestDemo.http` in Visual Studio while `RestDemo` is running.
 
@@ -119,20 +119,26 @@ Example response:
 
 If curl is installed, you can also demo the endpoint using curl. Be certain the  `RestDemo` application is running and can accept requests to the endpoint.
 
-To test using curl open the Command Prompt and paste the desired curl command into the command-line.
+To test using curl, open a command prompt and paste the desired curl command.
 
 ```bash
 curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" -H "Content-Type: application/json" -d "{\"input\":\"222 2 22#\"}""
 ```
+Execute more curl examples exercising the endpoint in the [`curltests.txt`](./curltests.txt) file available in the solution.
 
 ---
 
 ## Error Handling
 
-Invalid input and other errors return a `400 Bad Request` response where the error is returned as a JSON response.
+The API returns a 400 Bad Request response when you submit invalid input.
 
 ```json
 {
   "error": "Input must contain the '#' terminator."
 }
 ```
+Examples of invalid input include
+
+* Missing # terminator
+* Unsupported keypad characters
+* Invalid JSON request bodies
