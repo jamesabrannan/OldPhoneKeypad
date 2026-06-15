@@ -196,7 +196,9 @@ The `RestDemo` project includes a `RestDemo.http` file containing sample API req
 The project also includes example curl requests in [curltests.txt](./docs/curltests.txt).
 
 ```bash
-curl -X POST https://localhost:5001/api/ironoldphonekeypad/oldphonepad -H "Content-Type: application/json" -d "{\"input\":\"4433555 555666#\"}"
+curl -X POST https://localhost:5001/api/ironoldphonekeypad/oldphonepad \
+-H "Content-Type: application/json" \
+-d "{\"input\":\"4433555 555666#\"}"
 ```
 
 ---

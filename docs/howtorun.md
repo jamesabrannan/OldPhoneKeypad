@@ -140,7 +140,9 @@ If curl is installed, you can also test the endpoint using curl. Ensure the `Res
 Open a command prompt or terminal window and execute the desired curl command.
 
 ```bash
-curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" -H "Content-Type: application/json" -d "{\"input\":\"222 2 22#\"}"
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" \
+-H "Content-Type: application/json" \
+-d "{\"input\":\"222 2 22#\"}"
 ```
 Execute more curl examples exercising the endpoint in the [`curltests.txt`](./curltests.txt) file available in the solution.
 
