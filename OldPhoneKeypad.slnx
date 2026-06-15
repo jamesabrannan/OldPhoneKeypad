@@ -1,9 +1,9 @@
 <Solution>
   <Folder Name="/docs/">
-    <File Path="CurlExamples.md" />
-    <File Path="Howto.md" />
+    <File Path="docs/CurlExamples.md" />
+    <File Path="docs/curltests.txt" />
+    <File Path="docs/Howto.md" />
   </Folder>
-  <Folder Name="/docs/images/" />
   <Folder Name="/Solution Items/">
     <File Path="README.md" />
   </Folder>
@@ -12,7 +12,6 @@
     <Project Path="src/RestDemo/RestDemo.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <File Path="curltests.txt" />
     <Project Path="tests/Tests/Tests.csproj" />
   </Folder>
 </Solution>
