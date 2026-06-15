@@ -1,6 +1,6 @@
 # IronOldPhoneKeypad
 
-IronOldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo showing how the library can be integrated into a web application.
+IronOldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo showing how the library can be integrated into a REST API application.
 
 ## Installation
 
