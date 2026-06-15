@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/docs/">
+    <File Path="docs/ai-review-prompt.md" />
     <File Path="docs/curltests.txt" />
     <File Path="docs/howtorun.md" />
   </Folder>
