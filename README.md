@@ -153,7 +153,7 @@ POST /api/ironoldphonekeypad/oldphonepad
 ### Validation Rules
 
 - Input must terminate with `#`
-- Consecutive repeated keys require spaces
+- A space is required between consecutive characters that use the same keypad key
 - `*` acts as backspace
 
 ### Error Responses
@@ -196,7 +196,7 @@ The `RestDemo` project includes a `RestDemo.http` file containing sample API req
 The project also includes example curl requests in [curltests.txt](./docs/curltests.txt).
 
 ```bash
-curl -X POST https://localhost:5001/api/ironoldphonekeypad/oldphonepad \
+curl -X POST https://localhost:7001/api/ironoldphonekeypad/oldphonepad \
 -H "Content-Type: application/json" \
 -d "{\"input\":\"4433555 555666#\"}"
 ```

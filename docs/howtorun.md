@@ -31,7 +31,7 @@ http://localhost:5059
 
 The project includes a `RestDemo.http` file containing ready-to-run HTTP example requests. The `.http` file format allows HTTP requests to be executed directly from Visual Studio without requiring external tools such as Postman or curl.
 
-* Open  `RestDemo.http` in Visual Studio while `RestDemo` is running.
+* Open `RestDemo.http` in Visual Studio while `RestDemo` is running.
 
 ![fig2](./images/fig2.png)
 

@@ -9,6 +9,6 @@
     public class ParseRequest
     {
         // The old phone keypad input string to parse.
-        public string Input { get; set; }
+        public string? Input { get; set; }
     }
 }
