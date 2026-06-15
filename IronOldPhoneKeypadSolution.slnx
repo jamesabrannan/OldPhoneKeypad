@@ -1,13 +1,13 @@
 <Solution>
   <Folder Name="/docs/">
     <File Path="docs/curltests.txt" />
-    <File Path="docs/Howto.md" />
+    <File Path="docs/howtorun.md" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path="README.md" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/OldPhoneKeypad/OldPhoneKeypad.csproj" />
+    <Project Path="src/IronOldPhoneKeypad/IronOldPhoneKeypad.csproj" />
     <Project Path="src/RestDemo/RestDemo.csproj" />
   </Folder>
   <Folder Name="/tests/">

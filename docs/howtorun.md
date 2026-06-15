@@ -1,4 +1,4 @@
-# HOWTO
+# HOW TO RUN
 
 Use Visual Studio and the included `RestDemo.http` file to quickly run and test the REST API demo application.
 
@@ -37,13 +37,11 @@ The project includes a `RestDemo.http` file containing ready-to-run HTTP example
 
 ![fig2](./images/fig2.png)
 
-
-
 * Click `Send Request` in any request block to execute the request.
 
 ### Example Requests
 
-The following three example requests illustrate running the demo application.
+The following examples show common REST API requests and responses.
 
 #### OldPhonePad - HELLO example
 
@@ -68,6 +66,8 @@ Example response:
   "output": "HELLO"
 }
 ```
+
+
 #### OldPhonePad - invalid input example
 
 Example request:
@@ -75,7 +75,7 @@ Example request:
 ![](./images/fig4.png)
 
 ```http
-POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
+POST https://localhost:7001/api/ironoldphonekeypad/oldphonepad
 Content-Type: application/json
 
 {
@@ -90,6 +90,8 @@ Example response:
   "error": "Invalid keypad character: A"
 }
 ```
+
+
 #### OldPhonePad - single character example
 
 Example request:
@@ -97,7 +99,7 @@ Example request:
 ![](./images/fig5.png)
 
 ```http
-POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
+POST https://localhost:7001/api/ironoldphonekeypad/oldphonepad
 Content-Type: application/json
 
 {
@@ -117,12 +119,12 @@ Example response:
 
 ## Running with curl
 
-If curl is installed, you can also demo the endpoint using curl. Be certain the  `RestDemo` application is running and can accept requests to the endpoint.
+If curl is installed, you can also demo the endpoint using curl. Be certain the `RestDemo` application is running.
 
 To test using curl, open a command prompt and paste the desired curl command.
 
 ```bash
-curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" -H "Content-Type: application/json" -d "{\"input\":\"222 2 22#\"}""
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" -H "Content-Type: application/json" -d "{\"input\":\"222 2 22#\"}"
 ```
 Execute more curl examples exercising the endpoint in the [`curltests.txt`](./curltests.txt) file available in the solution.
 
@@ -137,8 +139,8 @@ The API returns a 400 Bad Request response when you submit invalid input.
   "error": "Input must contain the '#' terminator."
 }
 ```
-Examples of invalid input include
+Examples of invalid input include:
 
-* Missing # terminator
+* Missing `#` terminator
 * Unsupported keypad characters
 * Invalid JSON request bodies

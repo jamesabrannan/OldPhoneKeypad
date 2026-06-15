@@ -32,7 +32,7 @@ Content-Type: application/json
   "input": "44A#"
 }
 
-### OldPhonePad - backspace example
+### OldPhonePad - pause between repeated keys example
 POST {{RestDemo_HostAddress}}/api/ironoldphonekeypad/oldphonepad
 Content-Type: application/json
 

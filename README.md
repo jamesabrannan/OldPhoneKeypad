@@ -1,30 +1,29 @@
-# OldPhoneKeypad
+# IronOldPhoneKeypad
 
-OldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo showing how to integrate the library into a real-world application.
+IronOldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo demonstrating how to integrate the library into a REST API application.
 
 ## Solution Structure
 
 ```text
-OldPhoneKeypad
+IronOldPhoneKeypadSolution
 │
 ├── src
-│   ├── OldPhoneKeypad
+│   ├── IronOldPhoneKeypad
 │   └── RestDemo
 │
 ├── tests
-│   └── OldPhoneKeypad.Tests
+│   └── Tests
 │
-├── docs
-└── samples
+└── docs
 ```
 
 ### Projects
 
-| Project              | Description                                                      |
-| -------------------- | ---------------------------------------------------------------- |
-| OldPhoneKeypad       | Core reusable keypad parsing library targeting .NET Standard 2.0 |
-| RestDemo             | ASP.NET Core REST API wrapper demonstrating library integration  |
-| OldPhoneKeypad.Tests | xUnit test project validating keypad parsing behavior            |
+| Project            | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| IronOldPhoneKeypad | Core reusable keypad parsing library targeting .NET Standard 2.0 |
+| RestDemo           | ASP.NET Core REST API wrapper demonstrating library integration |
+| Tests              | xUnit test project validating keypad parsing behavior        |
 
 ---
 
@@ -119,13 +118,13 @@ POST /api/ironoldphonekeypad/oldphonepad
 2. Set `RestDemo` as the startup project
 3. Press `F5` or `Ctrl+F5`
 
-The API will launch using the local development profile.
+The REST API launches using the configured local development profile.
 
-Refer to the document [howtorun.md](./docs/howtorun.md) for more more detailed instructions on running the REST demo
+Refer to the document [How To Run](./docs/howtorun.md) for more detailed instructions on running the REST demo.
 
 ## Test Requests
 
-The project includes a `RestDemo.http` file containing sample API requests that can be executed directly from Visual Studio.
+The `RestDemo` project includes a `RestDemo.http` file containing sample API requests that can be executed directly from Visual Studio.
 
 The project also includes example curl requests in [curltests.txt](./docs/curltests.txt).
 
@@ -137,8 +136,8 @@ The project uses xUnit for automated testing.
 
 From Visual Studio:
 
-* Open Test Explorer
-* Run All Tests
+* Open Test Explorer.
+* Run All Tests.
 
 Or from the command line:
 
@@ -150,10 +149,10 @@ dotnet test
 
 # Framework Targets
 
-| Project              | Target Framework  |
-| -------------------- | ----------------- |
-| OldPhoneKeypad       | .NET Standard 2.0 |
-| RestDemo             | .NET 10           |
-| OldPhoneKeypad.Tests | .NET 10           |
+| Project            | Target Framework  |
+| ------------------ | ----------------- |
+| IronOldPhoneKeypad | .NET Standard 2.0 |
+| RestDemo           | .NET 10           |
+| Tests              | .NET 10           |
 
 The core library targets .NET Standard 2.0 to maximize compatibility across .NET implementations.

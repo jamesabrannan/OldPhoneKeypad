@@ -1,7 +1,8 @@
-﻿using System;
+﻿using IronOldPhoneKeypad;
+using System;
 using Xunit;
 
-namespace IronOldPhoneKeypad.Tests
+namespace Tests
 {
     public class PhoneKeypadTests
     {
