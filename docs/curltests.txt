@@ -3,7 +3,7 @@ curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 -H "Content-Type: application/json" ^
 -d "{\"input\":\"222 2 22#\"}"
 
-# OldPhonePad - invalid input example
+# OldPhonePad - invalid A character invalid input example
 curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 -H "Content-Type: application/json" ^
 -d "{\"input\":\"44A#\"}"
@@ -27,3 +27,13 @@ curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 -H "Content-Type: application/json" ^
 -d "{\"input\":\"4433555 555666#\"}"
+
+# OldPhonePad - no terminating # character invalid input Example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "{\"input\":\"466\"}"
+
+# OldPhonePad - not JSON REQUEST Error Example
+curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
+-H "Content-Type: application/json" ^
+-d "\466\"}"

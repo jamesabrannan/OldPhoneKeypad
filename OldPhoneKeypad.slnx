@@ -1,6 +1,5 @@
 <Solution>
   <Folder Name="/docs/">
-    <File Path="docs/CurlExamples.md" />
     <File Path="docs/curltests.txt" />
     <File Path="docs/Howto.md" />
   </Folder>
