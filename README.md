@@ -2,6 +2,33 @@
 
 IronOldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo demonstrating how to integrate the library into a REST API application.
 
+## REST API Quick Start
+
+Endpoint:
+
+```http
+POST /api/ironoldphonekeypad/oldphonepad
+```
+
+Example Request:
+
+```json
+{
+  "input": "4433555 555666#"
+}
+```
+
+
+
+Example Response:
+
+```json
+{
+  "input": "4433555 555666#",
+  "output": "HELLO"
+}
+```
+
 ## Solution Structure
 
 ```text
@@ -159,8 +186,10 @@ The core library targets .NET Standard 2.0 to maximize compatibility across .NET
 
 ## AI Prompt
 
-The following ChatGPT prompt was used for project review and documentation feedback:
+The following ChatGPT prompt was used for project review:
 
-https://chatgpt.com/?q=Review%20this%20C%23%20Software%20Sales%20Engineer%20coding%20challenge%20submission%20and%20summarize%20the%20solution%20architecture%2C%20REST%20API%20wrapper%2C%20testing%20strategy%2C%20documentation%20quality%2C%20and%20overall%20engineering%20approach.%20GitHub%20repository%3A%20https%3A%2F%2Fgithub.com%2Fjamesabrannan%2FOldPhoneKeypad
+Explain how to use this C# old phone keypad library and its REST API wrapper from the perspective of a developer integrating the API into an application. Describe the endpoint, request and response formats, error handling, example usage, and overall developer experience. GitHub repository: https://github.com/jamesabrannan/OldPhoneKeypad.
+
+https://chatgpt.com/?q=Explain%20how%20to%20use%20this%20C%23%20old%20phone%20keypad%20library%20and%20its%20REST%20API%20wrapper%20from%20the%20perspective%20of%20a%20developer%20integrating%20the%20API%20into%20an%20application.%20Describe%20the%20endpoint%2C%20request%20and%20response%20formats%2C%20error%20handling%2C%20example%20usage%2C%20and%20overall%20developer%20experience.%20GitHub%20repository%3A%20https%3A%2F%2Fgithub.com%2Fjamesabrannan%2FOldPhoneKeypad
 
 Tool used: ChatGPT
