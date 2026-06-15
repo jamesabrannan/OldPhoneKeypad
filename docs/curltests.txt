@@ -31,4 +31,4 @@ curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 # OldPhonePad - not JSON REQUEST Error Example
 curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" ^
 -H "Content-Type: application/json" ^
--d "\466\"}"
+-d "{invalid-json}"

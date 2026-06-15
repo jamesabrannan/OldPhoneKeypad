@@ -4,7 +4,7 @@ Use Visual Studio and the included `RestDemo.http` file to quickly run and test 
 
 ## Assumptions
 
-Running this demo application assumes the following setup configuration.
+This demo application assumes the following setup configuration.
 
 - Visual Studio 2026 or later is installed with the ASP.NET and .NET workloads.
 - .NET 10 SDK is installed for the REST demo and test projects.
