@@ -1,6 +1,20 @@
 # IronOldPhoneKeypad
 
-IronOldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo demonstrating integration into a REST API application.
+IronOldPhoneKeypad is a simple C# class library that converts old mobile phone keypad input sequences into text output. The project also includes a minimal ASP.NET Core REST API demo showing how the library can be integrated into a web application.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jamesabrannan/OldPhoneKeypad.git
+```
+
+Build the solution:
+
+```bash
+dotnet build
+```
 
 ## API Summary
 
@@ -79,7 +93,7 @@ IronOldPhoneKeypadSolution
 | Project            | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | IronOldPhoneKeypad | Core reusable keypad parsing library targeting .NET Standard 2.0 |
-| RestDemo           | ASP.NET Core REST API wrapper demonstrating library integration |
+| RestDemo           | ASP.NET Core REST API demonstrating library integration      |
 | Tests              | xUnit test project validating keypad parsing behavior        |
 
 ---
@@ -111,7 +125,7 @@ The keypad mappings follow the traditional mobile phone keypad layout:
 
 ## REST API Demo
 
-The solution includes a minimal ASP.NET Core REST API wrapper project.
+The solution includes a minimal ASP.NET Core REST API project. The REST API project is intentionally thin and delegates all parsing logic to the reusable core library.
 
 ### Endpoint
 
@@ -136,7 +150,22 @@ POST /api/ironoldphonekeypad/oldphonepad
 }
 ```
 
-### Error Response
+### Validation Rules
+
+- Input must terminate with `#`
+- Consecutive repeated keys require spaces
+- `*` acts as backspace
+
+### Error Responses
+
+The API returns standard HTTP status codes along with a JSON error response body.
+
+| Status Code | Description      |
+| ----------- | ---------------- |
+| 200         | Successful parse |
+| 400         | Invalid input    |
+
+Example error response:
 
 ```json
 {
@@ -162,7 +191,13 @@ Refer to the document [How To Run](./docs/howtorun.md) for more detailed instruc
 
 The `RestDemo` project includes a `RestDemo.http` file containing sample API requests that can be executed directly from Visual Studio.
 
+### Example curl Request
+
 The project also includes example curl requests in [curltests.txt](./docs/curltests.txt).
+
+```bash
+curl -X POST https://localhost:5001/api/ironoldphonekeypad/oldphonepad -H "Content-Type: application/json" -d "{\"input\":\"4433555 555666#\"}"
+```
 
 ---
 

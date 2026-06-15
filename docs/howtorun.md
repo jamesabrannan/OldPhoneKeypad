@@ -2,9 +2,7 @@
 
 Use Visual Studio and the included `RestDemo.http` file to quickly run and test the REST API demo application.
 
-## Assumptions
-
-This demo application assumes the following setup configuration.
+## Prerequisites
 
 - Visual Studio 2026 or later is installed with the ASP.NET and .NET workloads.
 - .NET 10 SDK is installed for the REST demo and test projects.
@@ -31,7 +29,7 @@ http://localhost:5059
 
 ## Send Requests from Visual Studio
 
-The project includes a `RestDemo.http` file containing ready-to-run HTTP example requests. 
+The project includes a `RestDemo.http` file containing ready-to-run HTTP example requests. The `.http` file format allows HTTP requests to be executed directly from Visual Studio without requiring external tools such as Postman or curl.
 
 * Open  `RestDemo.http` in Visual Studio while `RestDemo` is running.
 
@@ -41,9 +39,9 @@ The project includes a `RestDemo.http` file containing ready-to-run HTTP example
 
 ### Example Requests
 
-The following examples show common REST API requests and responses.
+The following examples show common REST API requests and expected responses.
 
-#### OldPhonePad - HELLO example
+#### Successful Parse Example
 
 Example request:
 
@@ -58,7 +56,13 @@ Content-Type: application/json
 }
 ```
 
-Example response:
+Expected HTTP status:
+
+```http
+200 OK
+```
+
+Expected response:
 
 ```json
 {
@@ -68,7 +72,7 @@ Example response:
 ```
 
 
-#### OldPhonePad - invalid input example
+#### Invalid Input Example
 
 Example request:
 
@@ -83,7 +87,13 @@ Content-Type: application/json
 }
 ```
 
-Example response:
+Expected HTTP status:
+
+```http
+400 Bad Request
+```
+
+Expected response:
 
 ```json
 {
@@ -92,7 +102,7 @@ Example response:
 ```
 
 
-#### OldPhonePad - single character example
+#### Single Character Example
 
 Example request:
 
@@ -107,7 +117,13 @@ Content-Type: application/json
 }
 ```
 
-Example response:
+Expected HTTP status:
+
+```http
+200 OK
+```
+
+Expected response:
 
 ```json
 {
@@ -119,9 +135,9 @@ Example response:
 
 ## Running with curl
 
-If curl is installed, you can also demo the endpoint using curl. Be certain the `RestDemo` application is running.
+If curl is installed, you can also test the endpoint using curl. Ensure the `RestDemo` application is running before executing curl requests.
 
-To test using curl, open a command prompt and paste the desired curl command.
+Open a command prompt or terminal window and execute the desired curl command.
 
 ```bash
 curl -X POST "https://localhost:7001/api/ironoldphonekeypad/oldphonepad" -H "Content-Type: application/json" -d "{\"input\":\"222 2 22#\"}"
@@ -132,7 +148,19 @@ Execute more curl examples exercising the endpoint in the [`curltests.txt`](./cu
 
 ## Error Handling
 
-The API returns a 400 Bad Request response when you submit invalid input.
+The API returns standard HTTP status codes along with a JSON error response body.
+
+| Status Code | Description      |
+| ----------- | ---------------- |
+| 200         | Successful parse |
+| 400         | Invalid input    |
+
+Example HTTP response:
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+```
 
 ```json
 {
