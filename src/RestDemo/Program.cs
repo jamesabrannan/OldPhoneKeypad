@@ -27,7 +27,11 @@ app.MapPost("/api/ironoldphonekeypad/oldphonepad",
         {
             // Reads and deserializes the JSON request body into a ParseRequest object.
             request = await JsonSerializer.DeserializeAsync<ParseRequest>(
-                context.Request.Body);
+                context.Request.Body,
+                new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
         }
         catch (JsonException)
         {
