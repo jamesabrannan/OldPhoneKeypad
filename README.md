@@ -192,13 +192,3 @@ dotnet test
 | Tests              | .NET 10           |
 
 The core library targets .NET Standard 2.0 to maximize compatibility across .NET implementations.
-
-## AI Prompt
-
-The following ChatGPT prompt was used for project review:
-
-Explain how to use this C# old phone keypad library and its REST API wrapper from the perspective of a developer integrating the API into an application. Describe the endpoint, request and response formats, error handling, example usage, and overall developer experience. GitHub repository: [OldPhoneKeypad](https://github.com/jamesabrannan/OldPhoneKeypad).
-
-[Open Prompt](https://chatgpt.com/?q=Read%20the%20following%20README%20first%20and%20use%20it%20as%20the%20primary%20source%20of%20truth%3A%20https%3A%2F%2Fraw.githubusercontent.com%2Fjamesabrannan%2FOldPhoneKeypad%2Fmaster%2FREADME.md%20%0A%0AThen%20analyze%20the%20GitHub%20repository%20https%3A%2F%2Fgithub.com%2Fjamesabrannan%2FOldPhoneKeypad%20and%20explain%20how%20to%20use%20the%20C%23%20library%20and%20REST%20API%20wrapper%20from%20the%20perspective%20of%20a%20developer%20integrating%20it%20into%20an%20application.%20Describe%20the%20endpoint%2C%20request%20and%20response%20formats%2C%20error%20handling%2C%20example%20usage%2C%20and%20overall%20developer%20experience.)
-
-Tool used: ChatGPT
