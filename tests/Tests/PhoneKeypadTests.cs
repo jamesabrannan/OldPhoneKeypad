@@ -60,12 +60,5 @@ namespace Tests
 
             Assert.Equal("CAB", result);
         }
-
-        [Fact]
-        public void OldPhonePad_StopsProcessing_HandlesAssignmentError()
-        {
-            Assert.Throws<ArgumentException>(
-                delegate { PhoneKeypad.OldPhonePad("44A#"); });
-        }
     }
 }

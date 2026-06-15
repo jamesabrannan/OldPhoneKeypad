@@ -22,7 +22,7 @@ namespace IronOldPhoneKeypad
         };
 
         // Converts an old phone keypad input string into its corresponding text.
-        // Example: "33# " returns "E".
+        // Example: "33#" returns "E".
         //
         // Rules:
         // - '#' ends the input.
